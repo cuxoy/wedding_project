@@ -88,6 +88,7 @@ function App() {
 const TopWrapper = styled.div`
   max-width: 1920px;
   margin: 0 auto;
+
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)),
     url("./images/top-image.jpg");
   background-size: cover;
