@@ -154,7 +154,7 @@ export const Invite = ({ data, guestData, guest }) => {
         секунд
       </DaysLeft>
       <Presence>
-        <PresenceTitle>Пожалуйста, подтвердиде ваше присутствие:</PresenceTitle>
+        <PresenceTitle>Будь ласка, підтвердть свою присутнісь:</PresenceTitle>
         <PresenceCheckbox>
           <input
             type="checkbox"
@@ -202,7 +202,7 @@ export const Invite = ({ data, guestData, guest }) => {
                 onChange={alcoholChange}
               />
               <label for="wisky" className="text">
-                Виски
+                Віскі
               </label>
             </Alcohol>
             <Alcohol>
@@ -273,7 +273,6 @@ const InviteWrapper = styled.div`
 `;
 
 const Name = styled.p`
-  font-family: "Caveat", cursive;
   font-size: 40px;
   color: #000000;
   padding-top: 70px;
@@ -286,7 +285,6 @@ const Name = styled.p`
 `;
 
 const Invitation = styled.p`
-  font-family: "Caveat", cursive;
   font-size: 40px;
   color: #000000;
   margin-bottom: 40px;
@@ -309,7 +307,6 @@ const Date = styled.div`
 `;
 
 const DaysLeft = styled.div`
-  font-family: "Caveat", cursive;
   margin: 0 auto;
   max-width: 691px;
   font-size: 40px;
@@ -340,6 +337,10 @@ const Alcohol = styled.div`
   input {
     width: 37px;
     height: 37px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 49px;
   }
 `;
 

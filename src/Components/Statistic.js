@@ -47,6 +47,10 @@ const TableWrapper = styled.div`
   text-align: center;
   font-family: sans-serif;
   padding: 30px;
+
+  @media (max-width: 768px) {
+    padding: 30px 5px;
+  }
 `;
 
 const Container = styled.div`

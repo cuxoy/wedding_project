@@ -33,7 +33,6 @@ const TableWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: "Caveat", cursive;
   font-size: 46px;
   color: #000000;
   text-align: center;
@@ -49,7 +48,6 @@ const Title = styled.div`
 
 const Number = styled.div`
   position: absolute;
-  font-family: "Caveat", cursive;
   color: #ffffff;
   top: -19px;
   left: calc(50% - 47px);
