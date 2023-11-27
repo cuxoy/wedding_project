@@ -8,7 +8,7 @@ export const Invite = ({ data, guestData, guest }) => {
   const [alcohol, setAlcohol] = useState({});
   const [noAlcohol, setNoAlcohol] = useState();
 
-  let timeend = new window.Date(2023, 7, 26, 14, 0);
+  let timeend = new window.Date(2024, 7, 26, 14, 0);
 
   useEffect(() => {
     if (guestData) {
@@ -153,72 +153,74 @@ export const Invite = ({ data, guestData, guest }) => {
         <br /> {date.today}днів {date.thour}годин {date.tmin}хвилин {date.tsec}
         секунд
       </DaysLeft>
-      <Presence>
-        <PresenceTitle>Будь ласка, підтвердть свою присутнісь:</PresenceTitle>
-        <PresenceCheckbox>
-          <input
-            type="checkbox"
-            id="highload1"
-            name="highload1"
-            checked={checked}
-            onChange={presenceChange}
-          />
-          <label
-            for="highload1"
-            data-onlabel="обов`язково прийду)))"
-            data-offlabel="нажаль не зможу прийти"
-            className="lb1"
-          ></label>
-        </PresenceCheckbox>
-        {checked && (
-          <Alcohols>
-            <Alcohol>
-              <input
-                type="checkbox"
-                checked={alcohol.vino}
-                id="vino"
-                onChange={alcoholChange}
-              />
-              <label for="vino" className="text">
-                Вино
-              </label>
-            </Alcohol>
-            <Alcohol>
-              <input
-                type="checkbox"
-                id="vodka"
-                checked={alcohol.vodka}
-                onChange={alcoholChange}
-              />
-              <label for="vodka" className="text">
-                Водка
-              </label>
-            </Alcohol>
-            <Alcohol>
-              <input
-                type="checkbox"
-                id="wisky"
-                checked={alcohol.wisky}
-                onChange={alcoholChange}
-              />
-              <label for="wisky" className="text">
-                Віскі
-              </label>
-            </Alcohol>
-            <Alcohol>
-              <input
-                type="checkbox"
-                id="noAlcohol"
-                checked={noAlcohol}
-                onChange={noAlcoholChange}
-              />
-              <label for="noAlcohol" className="text">
-                Не вживаю алкоголь
-              </label>
-            </Alcohol>
-          </Alcohols>
-        )}
-      </Presence>
+      {guest && (
+        <Presence>
+          <PresenceTitle>Будь ласка, підтвердть свою присутнісь:</PresenceTitle>
+          <PresenceCheckbox>
+            <input
+              type="checkbox"
+              id="highload1"
+              name="highload1"
+              checked={checked}
+              onChange={presenceChange}
+            />
+            <label
+              for="highload1"
+              data-onlabel="обов`язково прийду)))"
+              data-offlabel="нажаль не зможу прийти"
+              className="lb1"
+            ></label>
+          </PresenceCheckbox>
+          {checked && (
+            <Alcohols>
+              <Alcohol>
+                <input
+                  type="checkbox"
+                  checked={alcohol.vino}
+                  id="vino"
+                  onChange={alcoholChange}
+                />
+                <label for="vino" className="text">
+                  Вино
+                </label>
+              </Alcohol>
+              <Alcohol>
+                <input
+                  type="checkbox"
+                  id="vodka"
+                  checked={alcohol.vodka}
+                  onChange={alcoholChange}
+                />
+                <label for="vodka" className="text">
+                  Водка
+                </label>
+              </Alcohol>
+              <Alcohol>
+                <input
+                  type="checkbox"
+                  id="wisky"
+                  checked={alcohol.wisky}
+                  onChange={alcoholChange}
+                />
+                <label for="wisky" className="text">
+                  Віскі
+                </label>
+              </Alcohol>
+              <Alcohol>
+                <input
+                  type="checkbox"
+                  id="noAlcohol"
+                  checked={noAlcohol}
+                  onChange={noAlcoholChange}
+                />
+                <label for="noAlcohol" className="text">
+                  Не вживаю алкоголь
+                </label>
+              </Alcohol>
+            </Alcohols>
+          )}
+        </Presence>
+      )}
     </InviteWrapper>
   );
 };

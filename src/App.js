@@ -14,6 +14,7 @@ import { Conditions } from "./Components/Conditions";
 
 function App() {
   const [data, setData] = useState([]);
+  const [URLname, SetURLname] = useState("");
 
   const fetchGuestsData = () => {
     fetch(
@@ -29,9 +30,10 @@ function App() {
 
   useEffect(() => {
     fetchGuestsData();
+    SetURLname(window.location.pathname);
   }, []);
 
-  const URLname = window.location.pathname;
+  // const URLname = window.location.pathname;
 
   let statistic;
   let guest;
@@ -58,7 +60,7 @@ function App() {
         </>
       )}
 
-      {guest && (
+      {!statistic && (
         <>
           <GlobalStyle />
           <TopWrapper>
@@ -73,7 +75,6 @@ function App() {
                 <Slider />
               </SliderInner>
               <Map />
-              <Presents />
               <Colors />
               <Conditions />
               <Table />

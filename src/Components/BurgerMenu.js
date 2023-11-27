@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { styled } from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
